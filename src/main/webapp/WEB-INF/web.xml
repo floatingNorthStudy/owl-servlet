@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+    <session-config>
+        <session-timeout>10</session-timeout>
+    </session-config>
+    <servlet>
+        <servlet-name>userServlet</servlet-name>
+        <servlet-class>com.owl.servlet.test3.UserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>userServlet</servlet-name>
+        <url-pattern>/session</url-pattern>
+    </servlet-mapping>
+	<listener>
+		<listener-class>com.owl.servlet.test3.UserSessionListener</listener-class>
+	</listener>
+</web-app>
